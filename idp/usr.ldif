@@ -1,0 +1,41 @@
+dn: uid=pelumodi,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Pepe Luis
+sn: Moreno Díaz
+uid: pelumodi
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/pepelu
+loginShell: /bin/bash
+userPassword: {SSHA}Cdml/azzMbHGMYq4iTeh8iDNI1Szp2BM
+
+dn: uid=majocaro,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: María José
+sn: Castro Romero
+uid: majocaro
+uidNumber: 2001
+gidNumber: 10000
+homeDirectory: /home/majocaro
+loginShell: /bin/bash
+userPassword: {SSHA}3Twfx+V23V9eEPUlIiEyAmyTPzk58tPZ
+
+dn: uid=rogupi,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Rogelio
+sn: Gutiérrez Prieto
+uid: rogupi
+uidNumber: 2002
+gidNumber: 10001
+homeDirectory: /home/rogupi
+loginShell: /bin/bash
+userPassword: {SSHA}hn0G4hrQNP2GhMUjVJDZiFkVceum2AbN
