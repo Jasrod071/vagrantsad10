@@ -1,0 +1,125 @@
+dn: dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Easy Config Pro S.L.U.
+dc: easyconfigpro
+structuralObjectClass: organization
+entryUUID: b25ed494-9afa-1040-9ffc-8fd681a209c9
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210183310Z
+entryCSN: 20260210183310.954220Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210183310Z
+
+dn: ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: organizationalUnit
+ou: ou_usuarios
+structuralObjectClass: organizationalUnit
+entryUUID: 8bc5d032-9afd-1040-8098-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210185334Z
+entryCSN: 20260210185334.688190Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210185334Z
+
+dn: ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: organizationalUnit
+ou: ou_grupos
+structuralObjectClass: organizationalUnit
+entryUUID: 8bc6d25c-9afd-1040-8099-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210185334Z
+entryCSN: 20260210185334.694830Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210185334Z
+
+dn: cn=alumnos,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10000
+structuralObjectClass: posixGroup
+cn: alumnos
+entryUUID: 2b6038f0-9b01-1040-809a-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210191930Z
+entryCSN: 20260210191930.948083Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210191930Z
+
+dn: cn=profesores,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10001
+structuralObjectClass: posixGroup
+cn: profesores
+entryUUID: 2b61445c-9b01-1040-809b-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210191930Z
+entryCSN: 20260210191930.954928Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210191930Z
+
+dn: uid=pelumodi,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Pepe Luis
+sn:: TW9yZW5vIETDrWF6
+uid: pelumodi
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/pepelu
+loginShell: /bin/bash
+userPassword:: e1NTSEF9Q2RtbC9henpNYkhHTVlxNGlUZWg4aUROSTFTenAyQk0=
+structuralObjectClass: inetOrgPerson
+entryUUID: a7b53e88-9b05-1040-809c-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210195137Z
+entryCSN: 20260210195137.529676Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210195137Z
+
+dn: uid=majocaro,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn:: TWFyw61hIEpvc8Op
+sn: Castro Romero
+uid: majocaro
+uidNumber: 2001
+gidNumber: 10000
+homeDirectory: /home/majocaro
+loginShell: /bin/bash
+userPassword:: e1NTSEF9M1R3ZngrVjIzVjllRVBVbElpRXlBbXlUUHprNTh0UFo=
+structuralObjectClass: inetOrgPerson
+entryUUID: a7b93fd8-9b05-1040-809d-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210195137Z
+entryCSN: 20260210195137.555926Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210195137Z
+
+dn: uid=rogupi,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Rogelio
+sn:: R3V0acOpcnJleiBQcmlldG8=
+uid: rogupi
+uidNumber: 2002
+gidNumber: 10001
+homeDirectory: /home/rogupi
+loginShell: /bin/bash
+userPassword:: e1NTSEF9aG4wRzRoclFOUDJHaE1ValZKRFppRmtWY2V1bTJBYk4=
+structuralObjectClass: inetOrgPerson
+entryUUID: a7b9d7cc-9b05-1040-809e-c545abad0e25
+creatorsName: cn=admin,dc=easyconfigpro,dc=org
+createTimestamp: 20260210195137Z
+entryCSN: 20260210195137.559816Z#000000#000#000000
+modifiersName: cn=admin,dc=easyconfigpro,dc=org
+modifyTimestamp: 20260210195137Z
+
