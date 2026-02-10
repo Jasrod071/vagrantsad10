@@ -1,0 +1,23 @@
+dn: cn=alumnos,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10000
+cn: alumnos
+
+dn: cn=profesores,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10001
+cn: profesores
+
+dn: cn=empleados,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10002
+cn: empleados
+
+dn: cn=directivos,ou=ou_grupos,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10003
+cn: directivos

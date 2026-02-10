@@ -39,3 +39,31 @@ gidNumber: 10001
 homeDirectory: /home/rogupi
 loginShell: /bin/bash
 userPassword: {SSHA}hn0G4hrQNP2GhMUjVJDZiFkVceum2AbN
+
+dn: uid=luna,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Luna Nueva
+sn: Garcia
+uid: luna
+uidNumber: 2003
+gidNumber: 10002
+homeDirectory: /home/luna
+loginShell: /bin/bash
+userPassword: password123
+
+dn: uid=sol,ou=ou_usuarios,dc=easyconfigpro,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Sol Brillante
+sn: Perez
+uid: sol
+uidNumber: 2004
+gidNumber: 10003
+homeDirectory: /home/sol
+loginShell: /bin/bash
+userPassword: password123
