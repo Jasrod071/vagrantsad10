@@ -1,0 +1,88 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            c1:b2:a5:0d:4b:c3:c5:63:99:b3:64:71:18:d6:c4:ea
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=EasyConfigPro-CA
+        Validity
+            Not Before: Feb 14 19:12:11 2026 GMT
+            Not After : May 19 19:12:11 2028 GMT
+        Subject: CN=servidor-easyconfigpro
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e0:4e:12:fa:b6:6a:4f:1f:08:db:ac:ab:a6:64:
+                    b5:6c:ff:23:20:9f:12:a8:6c:2a:4f:12:9a:46:85:
+                    01:94:a7:0a:22:ed:4b:ca:29:6a:06:59:88:65:51:
+                    3f:12:c8:62:f6:70:51:95:57:8c:8f:14:a7:0c:4f:
+                    d1:2d:43:d4:28:8e:96:07:6c:e5:3f:84:12:71:fa:
+                    69:9a:43:40:9c:75:ae:50:5f:a6:2d:9e:4f:06:d9:
+                    d9:14:fa:7a:8e:b8:38:07:bd:4b:e7:76:d3:a8:0d:
+                    77:51:84:a5:db:dd:8c:8d:80:fc:fa:fe:96:f9:a3:
+                    a2:8b:4f:23:0d:1a:ed:a9:0f:c6:81:4b:91:4a:df:
+                    8a:47:0c:4e:fd:29:46:0f:2b:8b:3c:7d:41:69:cc:
+                    7d:42:6c:d3:be:65:88:b6:26:af:04:df:e4:6e:58:
+                    59:42:8b:af:86:c4:5f:1c:20:4d:23:a9:7f:d2:26:
+                    1c:f7:37:b8:1d:8a:5e:e1:e4:88:ba:40:03:ab:10:
+                    78:92:bd:02:1a:7c:d2:90:8a:73:69:d9:10:e8:ef:
+                    bb:c5:ed:f6:b1:be:24:7d:0a:dd:83:24:91:12:c9:
+                    86:9a:0f:8e:1e:f1:24:8f:8a:03:54:96:e9:6b:1f:
+                    5f:86:0a:b8:d6:7f:01:0c:6f:d1:1a:ae:98:73:f3:
+                    a8:39
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                E5:D0:45:5D:79:2F:A5:E0:B6:6C:23:88:0C:98:71:35:78:C2:F5:19
+            X509v3 Authority Key Identifier: 
+                keyid:CE:A4:70:56:BA:53:64:15:1E:8F:4E:D2:2D:8B:12:C5:3E:BC:12:36
+                DirName:/CN=EasyConfigPro-CA
+                serial:3F:D2:C9:01:39:31:91:4E:38:8A:E0:FE:20:03:D6:17:55:A5:8F:EC
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:servidor-easyconfigpro
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        64:b3:47:5f:c7:88:2d:f6:a8:c9:80:1e:84:85:60:18:f1:4d:
+        fa:47:ce:b7:73:54:52:ae:fb:b7:cd:46:e1:f2:c6:99:e0:db:
+        a7:8e:21:13:15:94:b8:2a:ac:b2:75:7a:73:ce:92:19:35:42:
+        76:2b:62:1d:04:b2:fc:78:90:c9:8f:73:00:ab:35:97:6f:76:
+        61:1e:1a:d0:83:50:53:b5:3f:b1:0a:13:78:9c:d9:3a:79:9e:
+        5a:82:5e:6f:d1:75:78:4c:44:39:81:f0:6e:48:ab:b9:db:ce:
+        66:ce:d1:e0:18:70:6a:8e:fc:fc:64:c8:c9:74:0f:4e:bd:f0:
+        49:25:49:94:3d:81:7e:2a:82:74:7d:c2:bd:e4:b6:ad:e4:b2:
+        8e:32:9c:0d:88:37:94:d7:7f:5c:26:d4:ad:a7:9f:b6:44:5e:
+        71:c6:32:27:0e:fb:24:be:52:c0:b7:52:ce:32:d1:ed:b1:36:
+        b8:a7:77:ff:4e:a4:f8:61:17:e0:3f:93:73:75:07:d0:4e:45:
+        ac:66:2d:c6:38:e7:20:46:79:c7:79:a8:70:01:24:00:97:49:
+        61:45:eb:47:d1:5e:71:1e:2e:a0:f0:78:13:48:69:b5:63:ee:
+        bb:8a:89:99:71:23:28:26:b8:d9:8b:31:e9:6d:7a:35:ef:66:
+        4d:d9:30:b5
+-----BEGIN CERTIFICATE-----
+MIIDkjCCAnqgAwIBAgIRAMGypQ1Lw8VjmbNkcRjWxOowDQYJKoZIhvcNAQELBQAw
+GzEZMBcGA1UEAwwQRWFzeUNvbmZpZ1Byby1DQTAeFw0yNjAyMTQxOTEyMTFaFw0y
+ODA1MTkxOTEyMTFaMCExHzAdBgNVBAMMFnNlcnZpZG9yLWVhc3ljb25maWdwcm8w
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDgThL6tmpPHwjbrKumZLVs
+/yMgnxKobCpPEppGhQGUpwoi7UvKKWoGWYhlUT8SyGL2cFGVV4yPFKcMT9EtQ9Qo
+jpYHbOU/hBJx+mmaQ0Ccda5QX6Ytnk8G2dkU+nqOuDgHvUvndtOoDXdRhKXb3YyN
+gPz6/pb5o6KLTyMNGu2pD8aBS5FK34pHDE79KUYPK4s8fUFpzH1CbNO+ZYi2Jq8E
+3+RuWFlCi6+GxF8cIE0jqX/SJhz3N7gdil7h5Ii6QAOrEHiSvQIafNKQinNp2RDo
+77vF7faxviR9Ct2DJJESyYaaD44e8SSPigNUlulrH1+GCrjWfwEMb9Earphz86g5
+AgMBAAGjgcowgccwCQYDVR0TBAIwADAdBgNVHQ4EFgQU5dBFXXkvpeC2bCOIDJhx
+NXjC9RkwVgYDVR0jBE8wTYAUzqRwVrpTZBUej07SLYsSxT68EjahH6QdMBsxGTAX
+BgNVBAMMEEVhc3lDb25maWdQcm8tQ0GCFD/SyQE5MZFOOIrg/iAD1hdVpY/sMBMG
+A1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIFoDAhBgNVHREEGjAYghZzZXJ2
+aWRvci1lYXN5Y29uZmlncHJvMA0GCSqGSIb3DQEBCwUAA4IBAQBks0dfx4gt9qjJ
+gB6EhWAY8U36R863c1RSrvu3zUbh8saZ4NunjiETFZS4KqyydXpzzpIZNUJ2K2Id
+BLL8eJDJj3MAqzWXb3ZhHhrQg1BTtT+xChN4nNk6eZ5agl5v0XV4TEQ5gfBuSKu5
+285mztHgGHBqjvz8ZMjJdA9OvfBJJUmUPYF+KoJ0fcK95Lat5LKOMpwNiDeU139c
+JtStp5+2RF5xxjInDvskvlLAt1LOMtHtsTa4p3f/TqT4YRfgP5NzdQfQTkWsZi3G
+OOcgRnnHeahwASQAl0lhRetH0V5xHi6g8HgTSGm1Y+67iomZcSMoJrjZizHpbXo1
+72ZN2TC1
+-----END CERTIFICATE-----
