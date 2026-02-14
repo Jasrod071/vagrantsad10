@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "gw" do |gw|
     gw.vm.box = "bento/ubuntu-24.04"
     gw.vm.hostname = "gw-#{iniciales}"
+    gw.vm.network "forwarded_port", guest: 1194, host: 11194, protocol: "udp"
     # eth1: WAN (Mismo 'intnet' que el externo)
     gw.vm.network "private_network", ip: "203.0.113.254", netmask: "255.255.255.0", virtualbox__intnet: "red_wan"
     # eth2: DMZ
