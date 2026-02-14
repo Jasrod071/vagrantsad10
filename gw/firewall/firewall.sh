@@ -97,3 +97,23 @@ iptables -t nat -A POSTROUTING -s 172.1.10.0/24 -o eth1 -j MASQUERADE
 iptables -A FORWARD -j LOG --log-prefix "JSR-FORWARD-"
 iptables -A INPUT -j LOG --log-prefix "JSR-INPUT-"
 iptables -A OUTPUT -j LOG --log-prefix "JSR-OUTPUT-"
+
+# =========================================================
+# REGLAS PARA OPENVPN (APARTADO 5)
+# =========================================================
+
+# Regla P4.2.1 Permitir acceso WAN (eth1) a servidor VPN
+iptables -A INPUT -i eth1 -p udp --dport 1194 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -o eth1 -p udp --sport 1194 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+# Permitir que el openvpn en el GW consulte al servidor LDAP (IDP) 
+iptables -A OUTPUT -o eth3 -d 172.2.10.2 -p tcp --dport 389 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i eth3 -s 172.2.10.2 -p tcp --sport 389 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+# Regla P4.2.2 Permitir acceso de VPN-net a http de la DMZ
+iptables -A FORWARD -i tun0 -o eth2 -s 172.3.10.0/24 -d 172.1.10.3 -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth2 -o tun0 -s 172.1.10.3 -d 172.3.10.0/24 -p tcp -m multiport --sports 80,443 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+# Regla P4.2.3 Permitir acceso de VPN-net a IDP de la DMZ
+iptables -A FORWARD -i tun0 -o eth3 -s 172.3.10.0/24 -d 172.2.10.2 -p tcp --dport 389 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth3 -o tun0 -s 172.2.10.2 -d 172.3.10.0/24 -p tcp --sport 389 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
