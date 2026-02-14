@@ -7,3 +7,6 @@ Thumbs.db
 *.swp
 *~
 .env
+.vagrant/
+*.key
+*.pki/
