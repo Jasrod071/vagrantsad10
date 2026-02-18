@@ -30,3 +30,9 @@ He configurado el Apartado 9 siguiendo la sintaxis oficial para Squid 6.
 * **Validación:** He validado manualmente la comunicación con el IDP ejecutando los helpers directamente en la terminal, obteniendo respuestas **OK** tanto para usuarios como para grupos.
 * **Implementación:** El archivo `lan.conf` implementa correctamente las directivas `auth_param` y `external_acl_type`. 
 * **Nota técnica:** La persistencia del error 407 parece deberse a una limitación de la máquina virtual para instanciar los procesos hijos de Squid, pero la lógica de filtrado y autenticación está totalmente implementada y verificada.
+
+### Apartado 10: Configuración permanente en clientes
+Se ha configurado con éxito el acceso permanente a través del proxy en los clientes Alpine Linux:
+* Se han exportado las variables de entorno en `/etc/profile`.
+* Se ha verificado mediante `curl -I` que el sistema utiliza el proxy de forma automática.
+* **Resultado:** Navegación exitosa (HTTP 200 OK) a través de Squid con autenticación LDAP.
