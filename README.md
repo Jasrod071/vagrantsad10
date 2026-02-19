@@ -18,7 +18,6 @@
 ## Estructura de la Entrega Final
 Para facilitar la corrección, los archivos validados se han organizado en la carpeta `entrega_final/`:
 * **config/**: Contiene `squid.conf.final`, `lan.conf` (LDAP), `iptables-gateway.rules` y las listas de dominios.
-* **capturas/**: Pruebas gráficas de los tests superados (4/4 OK y bloqueo 403).
 
 ---
 
