@@ -1,11 +1,12 @@
+# Bloquear cualquier archivo que contenga claves o certificados privados
+*.pem
+*.crt
+*.p12
+*.pfx
+*.csr
+# Bloquear carpetas de certificados enteras por seguridad
+certs/
+clients/
+# Bloquear archivos de configuración de Vagrant más específicos
 .vagrant/
-*.log
-ubuntu-*-cloudimg-console.log
-.DS_Store
-Thumbs.db
-.vscode/
-*.swp
-*~
-.env
-*.key
-*.pki/
+vagrant-ssh-config

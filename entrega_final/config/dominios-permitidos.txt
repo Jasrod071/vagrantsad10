@@ -1,0 +1,8 @@
+.ubuntu.com
+.debian.org
+.alpinelinux.org
+.kernel.org
+archive.ubuntu.com
+security.ubuntu.com
+extras.ubuntu.com
+changelogs.ubuntu.com

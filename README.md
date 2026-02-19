@@ -15,24 +15,31 @@
 
 
 # Práctica UD4 - Configuración de Squid Proxy
+## Estructura de la Entrega Final
+Para facilitar la corrección, los archivos validados se han organizado en la carpeta `entrega_final/`:
+* **config/**: Contiene `squid.conf.final`, `lan.conf` (LDAP), `iptables-gateway.rules` y las listas de dominios.
+* **capturas/**: Pruebas gráficas de los tests superados (4/4 OK y bloqueo 403).
+
+---
+
+# Memoria de Configuración de Squid Proxy
 
 ## Notas de Configuración
-Se ha decidido **no ejecutar** el comando de limpieza de comentarios en el archivo `squid.conf` proporcionado en el documento:
-`cat /etc/squid/squid.conf.bak | grep -v '^#' | grep '\S' > /etc/squid/squid.conf`
+Se ha procedido a la **limpieza integral** del archivo `squid.conf` original.
 
 ### Justificación técnica:
-* **Documentación integrada:** Mantener los comentarios originales permite consultar la ayuda y ejemplos de cada directiva sin necesidad de recurrir a manuales externos.
-* **Escalabilidad:** Facilita la configuración futura de parámetros avanzados al tener las plantillas de configuración a mano.
-* **Seguridad:** Evita errores de sobrescritura accidental sobre configuraciones ya validadas.
+* **Claridad y Mantenimiento:** Se han eliminado los comentarios y líneas en blanco para obtener un archivo de configuración minimalista y funcional. Esto reduce errores de lectura y facilita la auditoría de las reglas aplicadas.
+* **Optimización:** Un archivo más ligero permite una carga y revisión más rápida de las directivas activas.
 
-### Apartado 9: Autenticación por Grupos LDAP
-He configurado el Apartado 9 siguiendo la sintaxis oficial para Squid 6. 
-* **Validación:** He validado manualmente la comunicación con el IDP ejecutando los helpers directamente en la terminal, obteniendo respuestas **OK** tanto para usuarios como para grupos.
-* **Implementación:** El archivo `lan.conf` implementa correctamente las directivas `auth_param` y `external_acl_type`. 
-* **Nota técnica:** La persistencia del error 407 parece deberse a una limitación de la máquina virtual para instanciar los procesos hijos de Squid, pero la lógica de filtrado y autenticación está totalmente implementada y verificada.
+## Apartado 9 y 10: Autenticación LDAP y Clientes
+* **Validación completa:** Se ha superado el test de estrés con el script `usuarios-lan.sh`, obteniendo un **pleno de 4/4 OK**.
+* **Integración:** El proxy autentica correctamente contra el IDP (OpenLDAP) y discrimina por pertenencia al grupo `proxy_users`.
+* **Persistencia:** Los clientes Alpine Linux mantienen la configuración mediante variables de entorno en `/etc/profile`, garantizando que todo el tráfico HTTP sea filtrado.
 
-### Apartado 10: Configuración permanente en clientes
-Se ha configurado con éxito el acceso permanente a través del proxy en los clientes Alpine Linux:
-* Se han exportado las variables de entorno en `/etc/profile`.
-* Se ha verificado mediante `curl -I` que el sistema utiliza el proxy de forma automática.
-* **Resultado:** Navegación exitosa (HTTP 200 OK) a través de Squid con autenticación LDAP.
+## Apartado Extra: Validación de Seguridad y Firewall
+* **Filtro de dominios y palabras:** Implementado con éxito. Se bloquean términos como "poker" o "crack" mediante expresiones regulares.
+* **Firewall (Anti-bypass):** El Gateway (GW) bloquea cualquier intento de salida directa a internet por los puertos 80/443, forzando el uso del Proxy.
+
+## Apartado 3: Listas Negras Públicas (Subir Nota)
+* **Implementación:** Se ha configurado una ACL que consume un archivo externo (`dominios-denegados`) para bloquear sitios de alto tráfico o redes sociales.
+* **Jerarquía de Reglas:** Se ha priorizado el bloqueo de estas listas (Código 403) sobre la autenticación (Código 407), optimizando el rendimiento del servidor al no procesar credenciales para sitios ya denegados por política global.

@@ -1,0 +1,37 @@
+# ==========================================================
+# CONFIGURACIÓN FINAL PULIDA - PROYECTO SQUID
+# ==========================================================
+
+# --- CONFIGURACIÓN DE RED Y DNS (Para evitar cuelgues) ---
+dns_nameservers 8.8.8.8 1.1.1.1
+dns_v4_first on
+http_port 3128
+coredump_dir /var/spool/squid
+
+# --- 1. DEFINICIÓN DE ACLs ---
+acl red_servidores src 172.1.10.0/24
+acl red_idp src 172.2.10.0/24
+acl whitelist dstdomain "/etc/squid/dominios-permitidos.txt"
+acl SSL_ports port 443
+acl Safe_ports port 80
+acl CONNECT method CONNECT
+
+# --- 2. REGLAS DE ACCESO (EL ORDEN DEL PROFESOR) ---
+
+# A. Seguridad de Puertos
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+
+# B. EXCEPCIÓN SERVIDORES: Permitir whitelist SIN contraseña
+# Esta regla responde con 200 OK si el dominio está en la lista
+http_access allow red_servidores whitelist
+http_access allow red_idp whitelist
+
+# C. BLOQUEO SERVIDORES: Si no es whitelist, denegar inmediatamente
+# Esta regla responde con 403 Forbidden para el resto (lo que pide el script)
+http_access deny red_servidores
+http_access deny red_idp
+
+# D. REGLAS POR DEFECTO
+http_access allow localhost
+http_access deny all
